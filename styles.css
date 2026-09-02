@@ -1054,100 +1054,92 @@ button {
 }
 
 .quote-section {
-  padding-top: 28px;
+  padding-top: 72px;
   padding-bottom: 92px;
 }
 
 .quote-shell {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
-  align-items: stretch;
-  gap: 34px;
-  padding: 38px;
-  color: var(--white);
-  background:
-    linear-gradient(120deg, var(--navy), var(--navy-2) 64%, var(--blue)),
-    var(--navy);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+  gap: 42px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .quote-intro {
   display: grid;
-  align-content: center;
+  justify-items: center;
   min-width: 0;
-}
-
-.quote-intro .eyebrow,
-.quote-intro h2 {
-  color: var(--white);
+  text-align: center;
 }
 
 .quote-intro .eyebrow {
-  opacity: 0.72;
+  color: var(--blue);
 }
 
 .quote-intro p:not(.eyebrow) {
-  max-width: 640px;
+  max-width: 720px;
   margin: 20px 0 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
   font-size: 1.06rem;
 }
 
 .quote-points {
   display: grid;
-  gap: 12px;
-  max-width: 520px;
-  margin: 28px 0 0;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 820px;
+  margin: 32px 0 0;
   padding: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   list-style: none;
 }
 
 .quote-points li {
-  position: relative;
-  padding-left: 28px;
-  color: rgba(255, 255, 255, 0.84);
+  display: flex;
+  min-height: 74px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  color: var(--ink);
+  border-right: 1px solid var(--line);
   font-weight: 700;
+  line-height: 1.35;
 }
 
-.quote-points li::before {
-  position: absolute;
-  top: 0.66em;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  content: "";
-  background: var(--yellow);
-  border-radius: 999px;
-  box-shadow: 0 0 0 5px rgba(244, 196, 49, 0.16);
+.quote-points li:last-child {
+  border-right: 0;
 }
 
 .quote-whatsapp-link {
   width: fit-content;
-  margin-top: 30px;
-  color: var(--yellow);
+  margin-top: 24px;
+  color: var(--blue);
   font-size: 0.95rem;
   font-weight: 800;
   text-decoration: underline;
-  text-decoration-color: rgba(244, 196, 49, 0.52);
+  text-decoration-color: rgba(21, 90, 166, 0.34);
   text-underline-offset: 4px;
 }
 
 .quote-whatsapp-link:hover,
 .quote-whatsapp-link:focus-visible {
-  color: var(--yellow-2);
+  color: var(--navy);
   text-decoration-color: currentColor;
 }
 
 .quote-form {
   display: grid;
+  width: min(720px, 100%);
   min-width: 0;
-  padding: 28px;
+  margin: 0 auto;
+  padding: 36px;
   color: var(--ink);
   background: var(--white);
-  border: 1px solid rgba(6, 24, 51, 0.1);
+  border: 1px solid var(--line);
+  border-top: 6px solid var(--yellow);
   border-radius: 8px;
-  box-shadow: 0 18px 40px rgba(6, 24, 51, 0.2);
+  box-shadow: 0 18px 46px rgba(6, 24, 51, 0.12);
 }
 
 .quote-progress {
@@ -1174,14 +1166,14 @@ button {
   display: block;
   width: 14.285%;
   height: 100%;
-  background: linear-gradient(90deg, var(--yellow), var(--blue));
+  background: var(--yellow);
   border-radius: inherit;
   transition: width 220ms ease;
 }
 
 .quote-step {
   display: none;
-  min-height: 240px;
+  min-height: 210px;
 }
 
 .quote-step.is-active {
@@ -1202,13 +1194,20 @@ button {
 .quote-step input,
 .quote-step select {
   width: 100%;
-  min-height: 58px;
-  padding: 0 16px;
+  min-height: 62px;
+  padding: 0 18px;
   color: var(--ink);
-  background: var(--white);
-  border: 1px solid var(--line);
+  background: #fbfcfe;
+  border: 1px solid #c8d2df;
   border-radius: 8px;
   font: inherit;
+}
+
+.quote-step input:focus,
+.quote-step select:focus {
+  outline: 0;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(21, 90, 166, 0.12);
 }
 
 .quote-step select {
@@ -1233,7 +1232,7 @@ button {
 
 .phone-field span {
   display: flex;
-  min-height: 58px;
+  min-height: 62px;
   align-items: center;
   padding: 0 16px;
   color: var(--navy);
@@ -1353,6 +1352,7 @@ button {
 
 .quote-controls .btn {
   width: 100%;
+  min-height: 56px;
   border: 0;
   cursor: pointer;
 }
@@ -1363,14 +1363,14 @@ button {
 }
 
 .quote-next {
-  color: var(--white);
-  background: var(--green);
-  box-shadow: 0 12px 26px rgba(22, 163, 74, 0.24);
+  color: var(--navy);
+  background: var(--yellow);
+  box-shadow: 0 12px 26px rgba(244, 196, 49, 0.24);
 }
 
 .quote-next:hover,
 .quote-next:focus-visible {
-  background: var(--green-dark);
+  background: var(--yellow-2);
 }
 
 .quote-back.is-hidden,
@@ -1406,6 +1406,10 @@ button {
 .quote-success strong,
 .quote-success span {
   display: block;
+}
+
+.quote-success[hidden] {
+  display: none;
 }
 
 .site-footer {
@@ -1575,19 +1579,6 @@ summary:focus-visible {
   .quote-intro h2,
   .cta-band h2 {
     font-size: 2.75rem;
-  }
-
-  .quote-shell {
-    grid-template-columns: 1fr;
-  }
-
-  .quote-intro {
-    align-content: start;
-  }
-
-  .quote-form {
-    width: 100%;
-    max-width: 640px;
   }
 
   .hero-visual {
@@ -1763,13 +1754,17 @@ summary:focus-visible {
   }
 
   .quote-section {
-    padding-top: 20px;
+    padding-top: 64px;
     padding-bottom: 64px;
   }
 
   .quote-shell {
-    gap: 28px;
-    padding: 24px;
+    gap: 34px;
+  }
+
+  .quote-intro {
+    justify-items: start;
+    text-align: left;
   }
 
   .quote-intro p:not(.eyebrow) {
@@ -1777,20 +1772,33 @@ summary:focus-visible {
   }
 
   .quote-points {
-    margin-top: 22px;
+    grid-template-columns: 1fr;
+    margin-top: 26px;
+  }
+
+  .quote-points li {
+    min-height: 0;
+    justify-content: flex-start;
+    padding: 14px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .quote-points li:last-child {
+    border-bottom: 0;
   }
 
   .quote-whatsapp-link {
-    width: 100%;
-    text-align: center;
+    width: fit-content;
+    text-align: left;
   }
 
   .quote-form {
-    padding: 20px;
+    padding: 26px 20px;
   }
 
   .quote-step {
-    min-height: 230px;
+    min-height: 210px;
   }
 
   .quote-step label,
