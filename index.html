@@ -41,9 +41,7 @@
         <a href="#galeria">Galeria</a>
         <a
           class="nav-budget-link"
-          href="https://wa.me/5584998972123?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bon%C3%A9s%20PraSol%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20bon%C3%A9s%20personalizados."
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#orcamento"
         >
           ORÇAMENTO
         </a>
@@ -52,9 +50,7 @@
 
       <a
         class="header-cta"
-        href="https://wa.me/5584998972123?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bon%C3%A9s%20PraSol%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20bon%C3%A9s%20personalizados."
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#orcamento"
       >
         ORÇAMENTO
       </a>
@@ -73,9 +69,7 @@
           <div class="hero-actions">
             <a
               class="btn btn-primary"
-              href="https://wa.me/5584998972123?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bon%C3%A9s%20PraSol%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20bon%C3%A9s%20personalizados."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#orcamento"
             >
               SOLICITAR ORÇAMENTO
             </a>
@@ -360,33 +354,168 @@
         </div>
       </section>
 
-      <section class="cta-band" aria-labelledby="cta-orcamento-titulo">
-        <div class="cta-copy">
-          <p class="eyebrow">Orçamento pelo WhatsApp</p>
-          <h2 id="cta-orcamento-titulo">Pronto para fazer seus bonés personalizados?</h2>
-          <p>
-            Fale com a Bonés PraSol pelo WhatsApp e solicite seu orçamento. Atendemos empresas,
-            eventos, marcas e grupos a partir de 30 unidades.
-          </p>
-        </div>
+      <section class="section quote-section" id="orcamento" aria-labelledby="orcamento-titulo">
+        <div class="quote-shell">
+          <div class="quote-intro">
+            <p class="eyebrow">Orçamento guiado</p>
+            <h2 id="orcamento-titulo">Envie os dados do seu pedido</h2>
+            <p>
+              Conte o básico sobre os bonés que você precisa. Assim a Bonés PraSol já recebe
+              quantidade, finalidade e logo para orientar o orçamento com mais precisão.
+            </p>
 
-        <div class="cta-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/5584998972123?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20bon%C3%A9s%20personalizados."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Solicitar orçamento pelo WhatsApp
-          </a>
-          <a
-            class="cta-phone"
-            href="https://wa.me/5584998972123?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20bon%C3%A9s%20personalizados."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ou chame direto: (84) 99897-2123
-          </a>
+            <ul class="quote-points" aria-label="Informações coletadas no orçamento">
+              <li>Pedido mínimo a partir de 30 unidades</li>
+              <li>Logo enviada agora ou definida depois</li>
+              <li>Resumo pronto para continuar no WhatsApp</li>
+            </ul>
+
+            <a
+              class="quote-whatsapp-link"
+              href="https://wa.me/5584998972123?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bon%C3%A9s%20PraSol%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20bon%C3%A9s%20personalizados."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Prefere falar direto? Chamar no WhatsApp
+            </a>
+          </div>
+
+          <form class="quote-form" data-budget-form novalidate>
+            <div class="quote-progress" aria-live="polite">
+              <span data-step-label>Etapa 1 de 7</span>
+              <div class="quote-progress-track" aria-hidden="true">
+                <span data-progress-bar></span>
+              </div>
+            </div>
+
+            <div class="quote-step is-active" data-budget-step>
+              <label for="quote-whatsapp">WhatsApp para contato</label>
+              <div class="phone-field">
+                <span>+55</span>
+                <input
+                  type="tel"
+                  id="quote-whatsapp"
+                  name="whatsapp"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="(84) 9 9897-2123"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="quote-step" data-budget-step>
+              <label for="quote-name">Nome</label>
+              <input
+                type="text"
+                id="quote-name"
+                name="nome"
+                autocomplete="name"
+                placeholder="Seu nome"
+                required
+              />
+            </div>
+
+            <div class="quote-step" data-budget-step>
+              <label for="quote-email">E-mail</label>
+              <input
+                type="email"
+                id="quote-email"
+                name="email"
+                autocomplete="email"
+                placeholder="contato@email.com"
+                required
+              />
+            </div>
+
+            <div class="quote-step" data-budget-step>
+              <label for="quote-quantity">Quantidade aproximada de bonés</label>
+              <select id="quote-quantity" name="quantidade" required>
+                <option value="">Escolher</option>
+                <option>30 a 49 unidades</option>
+                <option>50 a 99 unidades</option>
+                <option>100 a 299 unidades</option>
+                <option>300 a 999 unidades</option>
+                <option>1000 unidades ou mais</option>
+                <option>Menos de 30 unidades</option>
+                <option>Ainda estou definindo</option>
+              </select>
+            </div>
+
+            <div class="quote-step" data-budget-step>
+              <label for="quote-product">Tipo de produto desejado</label>
+              <select id="quote-product" name="tipo" required>
+                <option value="">Escolher</option>
+                <option>Boné trucker</option>
+                <option>Boné americano</option>
+                <option>Boné aba curva</option>
+                <option>Boné aba reta</option>
+                <option>Viseira</option>
+                <option>Bucket hat</option>
+                <option>Ainda não sei o modelo</option>
+              </select>
+            </div>
+
+            <div class="quote-step" data-budget-step>
+              <label for="quote-purpose">Finalidade dos bonés</label>
+              <select id="quote-purpose" name="finalidade" required>
+                <option value="">Escolher</option>
+                <option>Uniforme para equipe</option>
+                <option>Evento ou ação promocional</option>
+                <option>Brinde para clientes</option>
+                <option>Marca, loja ou coleção própria</option>
+                <option>Grupo, turma ou associação</option>
+                <option>Revenda</option>
+                <option>Outro uso</option>
+              </select>
+            </div>
+
+            <div class="quote-step" data-budget-step>
+              <fieldset class="logo-choice">
+                <legend>Logo ou arte da personalização</legend>
+                <label>
+                  <input type="radio" name="tem_logo" value="sim" required />
+                  Tenho a logo para enviar
+                </label>
+                <label>
+                  <input type="radio" name="tem_logo" value="nao" />
+                  Ainda não tenho logo
+                </label>
+              </fieldset>
+
+              <label class="upload-box is-disabled" for="quote-logo" data-upload-box>
+                <span data-upload-label>Escolher arquivo</span>
+                <small>PNG, JPG ou PDF até 5 MB</small>
+                <input
+                  type="file"
+                  id="quote-logo"
+                  name="logo"
+                  accept=".png,.jpg,.jpeg,.pdf,image/png,image/jpeg,application/pdf"
+                  disabled
+                  data-logo-input
+                />
+              </label>
+            </div>
+
+            <p class="quote-error" data-form-error aria-live="polite"></p>
+
+            <div class="quote-controls">
+              <button class="btn quote-back" type="button" data-prev-step>Voltar</button>
+              <button class="btn quote-next" type="button" data-next-step>Próximo</button>
+              <button class="btn btn-primary quote-submit" type="submit" data-submit-step>
+                Solicitar orçamento
+              </button>
+            </div>
+
+            <p class="quote-privacy">
+              Ao enviar, você autoriza a Bonés PraSol a entrar em contato sobre este orçamento.
+            </p>
+
+            <div class="quote-success" data-form-success hidden>
+              <strong>Resumo preparado.</strong>
+              <span>O WhatsApp será aberto com os dados do pedido para continuar o atendimento.</span>
+            </div>
+          </form>
         </div>
       </section>
 
