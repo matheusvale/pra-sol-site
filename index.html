@@ -5,17 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Bonés personalizados com produção própria, atendimento direto e acabamento profissional. Bonés PraSol fabrica para empresas, eventos e marcas a partir de 30 unidades."
+      content="Bonés e viseiras personalizados com produção própria, atendimento direto e acabamento profissional. Bonés PraSol fabrica para empresas, eventos e marcas a partir de 30 unidades."
     />
+    <link rel="canonical" href="https://bonesprasol.com.br" />
     <title>Bonés PraSol | Bonés personalizados com produção própria</title>
     <link rel="icon" href="assets/logo-prasol.svg" type="image/svg+xml" />
+
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Bonés PraSol" />
+    <meta property="og:url" content="https://bonesprasol.com.br" />
+    <meta property="og:title" content="Bonés PraSol | Bonés personalizados com produção própria" />
+    <meta
+      property="og:description"
+      content="Bonés e viseiras personalizados a partir de 30 unidades. Produção própria direto de Caicó/RN com envio para todo o Brasil."
+    />
+    <meta property="og:image" content="assets/images/ambientadas/peca-281.webp" />
+    <meta property="og:image:width" content="1536" />
+    <meta property="og:image:height" content="1024" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bonés PraSol | Bonés personalizados com produção própria" />
+    <meta
+      name="twitter:description"
+      content="Bonés e viseiras personalizados a partir de 30 unidades. Produção própria direto de Caicó/RN com envio para todo o Brasil."
+    />
+    <meta name="twitter:image" content="assets/images/ambientadas/peca-281.webp" />
+
+    <!-- Performance & Preload -->
+    <link rel="preload" as="image" href="assets/images/ambientadas/peca-281.webp" type="image/webp" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260902-2" />
+    <link rel="stylesheet" href="styles.css?v=20261104-orcamento" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bonés PraSol",
+      "alternateName": "PraSol Bonelaria",
+      "description": "Fábrica de bonés e viseiras personalizados com produção própria, acabamento premium e envio para todo o Brasil a partir de 30 unidades.",
+      "url": "https://bonesprasol.com.br",
+      "logo": "https://bonesprasol.com.br/assets/logo-prasol.svg",
+      "image": "https://bonesprasol.com.br/assets/images/ambientadas/peca-281.webp",
+      "telephone": "+55-84-99897-2123",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Maria da Soledade Figueiredo, 58, Castelo Branco",
+        "addressLocality": "Caicó",
+        "addressRegion": "RN",
+        "postalCode": "59300-000",
+        "addressCountry": "BR"
+      },
+      "taxID": "11.183.156/0001-71",
+      "priceRange": "$$",
+      "areaServed": "BR",
+      "sameAs": [
+        "https://instagram.com/bonesprasol"
+      ]
+    }
+    </script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -35,10 +91,11 @@
       </button>
 
       <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
-        <a href="#modelos">Modelos</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#clientes">Clientes</a>
         <a href="#processo">Processo</a>
         <a href="#acabamentos">Acabamentos</a>
-        <a href="#galeria">Galeria</a>
+
         <a
           class="nav-budget-link"
           href="#orcamento"
@@ -57,46 +114,52 @@
     </header>
 
     <main>
-      <section class="hero section" id="inicio">
+      <section class="hero section portfolio-hero" id="inicio">
         <div class="hero-content">
-          <p class="eyebrow">Fábrica de bonés personalizados</p>
-          <h1>Bonés personalizados feitos por quem entende de produção</h1>
-          <p class="hero-subtitle">
-            Produção própria, atendimento direto e acabamento profissional para empresas, eventos e
-            marcas. Pedidos a partir de 30 unidades.
-          </p>
-
+          <p class="eyebrow">Bonés PraSol · produção própria</p>
+          <h1>Sua marca,<br><em>bem produzida.</em></h1>
+          <p class="hero-subtitle">Bonés e viseiras com produção própria e cuidado em cada detalhe. Veja o que já fizemos e imagine a sua marca aqui.</p>
           <div class="hero-actions">
-            <a
-              class="btn btn-primary"
-              href="#orcamento"
-            >
-              SOLICITAR ORÇAMENTO
-            </a>
-            <a class="btn btn-secondary" href="#modelos">Ver modelos</a>
+            <a class="btn btn-primary" href="#trabalhos">CONHECER OS TRABALHOS <span aria-hidden="true">↗</span></a>
+            <a class="hero-text-link" href="#orcamento">Vamos criar o seu? <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-small">Da ideia à peça pronta · Pedidos a partir de 30 unidades</p>
+        </div>
+        <div class="hero-showcase">
+          <div class="hero-scene" data-hero-tone="sand">
+            <span class="scene-label">FEITO NA PRASOL</span>
+            <img id="hero-product" class="hero-product" src="assets/images/ambientadas/peca-281.webp" width="1536" height="1024" alt="Boné preto BYD Vitória Motors com bordado branco" fetchpriority="high" decoding="async">
+            <button class="hero-inspect" type="button" data-work="byd" aria-label="Ver de perto o boné BYD Vitória Motors">Ver de perto <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="showcase-caption"><div><span>TRABALHOS REAIS</span><strong id="hero-client">BYD · Vitória Motors</strong></div>
+            <div class="showcase-controls" aria-label="Escolher trabalho em destaque">
+              <button type="button" data-hero-work="byd" aria-label="Mostrar BYD Vitória Motors" aria-pressed="true">01</button>
+              <button type="button" data-hero-work="lubrax" aria-label="Mostrar Lubrax" aria-pressed="false">02</button>
+              <button type="button" data-hero-work="sicoob" aria-label="Mostrar Sicoob" aria-pressed="false">03</button>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="hero-visual" aria-label="Representação visual de produção de bonés">
-          <div class="factory-card">
-            <div class="cap-preview">
-              <div class="cap-crown"></div>
-              <div class="cap-panel left"></div>
-              <div class="cap-panel right"></div>
-              <div class="cap-brim"></div>
-              <span>PraSol</span>
-            </div>
-            <div class="stitch-lines" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <div class="production-note">
-            <strong>Da arte ao acabamento</strong>
-            <span>layout, corte, costura, aplicação e conferência no mesmo fluxo.</span>
-          </div>
-        </div>
+      <section class="clients-section section" id="clientes" aria-labelledby="clientes-titulo">
+        <div class="clients-intro"><div><p class="eyebrow">Alguns dos nossos clientes</p><h2 id="clientes-titulo">Marcas diferentes. <br>O mesmo cuidado.</h2></div><p>Conheça algumas das marcas que já passaram pela nossa produção.</p></div>
+        <ul class="client-names client-logo-grid" aria-label="Clientes PraSol">
+          <li class="client-logo client-logo-fiat"><img src="assets/images/marcas/fiat.webp" alt="Fiat" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-renault"><img src="assets/images/marcas/renault.webp" alt="Renault" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-petrobras"><img src="assets/images/marcas/petrobras.webp" alt="Petrobras" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-sebrae"><img src="assets/images/marcas/sebrae.webp" alt="Sebrae" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-sicredi"><img src="assets/images/marcas/sicredi.webp" alt="Sicredi" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-sicoob"><button type="button" data-work="sicoob" aria-label="Ver trabalho Sicoob"><img src="assets/images/marcas/sicoob.webp" alt="Sicoob" width="160" height="70" loading="lazy"><span class="client-explore" aria-hidden="true">↗</span></button></li>
+          <li class="client-logo client-logo-edp"><img src="assets/images/marcas/edp.webp" alt="EDP" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-ipiranga"><img src="assets/images/marcas/ipiranga.webp" alt="Ipiranga" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-nexa"><img src="assets/images/marcas/nexa.webp" alt="Nexa" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-loovi"><button type="button" data-work="loovi" aria-label="Ver trabalho Loovi"><img src="assets/images/marcas/loovi.webp" alt="Loovi" width="160" height="70" loading="lazy"><span class="client-explore" aria-hidden="true">↗</span></button></li>
+          <li class="client-logo client-logo-lubrax"><button type="button" data-work="lubrax" aria-label="Ver trabalho Lubrax"><img src="assets/images/marcas/lubrax.webp" alt="Lubrax" width="160" height="70" loading="lazy"><span class="client-explore" aria-hidden="true">↗</span></button></li>
+          <li class="client-logo client-logo-sundown"><img src="assets/images/marcas/sundown.webp" alt="Sundown" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-bluzz"><img src="assets/images/marcas/bluzz.webp" alt="Bluzz Saúde" width="160" height="70" loading="lazy"></li>
+          <li class="client-logo client-logo-marinha"><img src="assets/images/marcas/marinha.webp" alt="Marinha do Brasil" width="160" height="70" loading="lazy"></li>
+        </ul>
+        <div class="clients-footer"><p>Toque nas marcas com ↗ para ver os trabalhos.</p><button type="button" data-work="byd">Veja também: BYD · Vitória Motors <span aria-hidden="true">↗</span></button></div>
       </section>
 
       <section class="trust-bar" aria-label="Informações de confiança">
@@ -118,53 +181,140 @@
         </div>
       </section>
 
-      <!-- Model cards keep copy practical and specific to bonelaria. -->
-      <section class="section models-section" id="modelos">
-        <div class="section-heading">
-          <p class="eyebrow">O que fabricamos</p>
-          <h2>Modelos para marca aparecer bem, não só caber no boné</h2>
-          <p>
-            Cada peça pede proporção, tecido e aplicação certos. A PraSol ajuda a escolher o modelo
-            que combina com o uso, o público e a identidade da sua marca.
-          </p>
+      <section class="section featured-section" id="destaques" aria-labelledby="destaques-titulo">
+        <div class="portfolio-heading"><div><p class="eyebrow">Da nossa produção</p><h2 id="destaques-titulo">O cuidado aparece.<br>De perto, ainda mais.</h2></div><p>Três trabalhos para conhecer os materiais, a presença da marca e a execução de cada peça.</p></div>
+        <div class="featured-list">
+          <article class="featured-work featured-byd">
+            <div class="featured-pictures"><button type="button" class="featured-main" data-work="byd" aria-label="Explorar trabalho BYD · Vitória Motors"><img src="assets/images/ambientadas/peca-281.webp" alt="Boné BYD · Vitória Motors produzido pela PraSol" width="1536" height="1024" loading="lazy"><span class="featured-action">Explorar a peça ↗</span></button><button type="button" class="featured-detail" data-work="byd" data-start-photo="1" aria-label="Ver outro ângulo de BYD · Vitória Motors"><img src="assets/images/ambientadas/peca-282.webp" alt="Vista frontal do bordado BYD Vitória Motors" width="800" height="800" loading="lazy"><span>Outro olhar ↗</span></button></div>
+            <div class="featured-caption"><div><span class="featured-index">01 / BYD · Vitória Motors</span><h3>Presença nos detalhes.</h3></div><p>O bordado branco ganha leitura sobre o preto. Veja a peça por inteiro e observe a aplicação de perto.</p></div>
+          </article>
+          <article class="featured-work featured-lubrax">
+            <div class="featured-pictures"><button type="button" class="featured-main" data-work="lubrax" aria-label="Explorar trabalho Lubrax"><img src="assets/images/ambientadas/peca-285.webp" alt="Boné Lubrax produzido pela PraSol" width="1536" height="1024" loading="lazy"><span class="featured-action">Explorar a peça ↗</span></button><button type="button" class="featured-detail" data-work="lubrax" data-start-photo="1" aria-label="Ver outro ângulo de Lubrax"><img src="assets/images/ambientadas/peca-286.webp" alt="Vista frontal do boné verde Lubrax" width="800" height="800" loading="lazy"><span>Outro olhar ↗</span></button></div>
+            <div class="featured-caption"><div><span class="featured-index">02 / Lubrax</span><h3>A identidade também está na cor.</h3></div><p>Verde no tecido e na tela, com uma aplicação que acompanha a composição da peça.</p></div>
+          </article>
+          <article class="featured-work featured-sicoob">
+            <div class="featured-pictures"><button type="button" class="featured-main" data-work="sicoob" aria-label="Explorar trabalho Sicoob"><img src="assets/images/ambientadas/peca-287.webp" alt="Boné Sicoob produzido pela PraSol" width="1536" height="1024" loading="lazy"><span class="featured-action">Explorar a peça ↗</span></button><button type="button" class="featured-detail" data-work="sicoob" data-start-photo="2" aria-label="Ver outro ângulo de Sicoob"><img src="assets/images/ambientadas/peca-289.webp" alt="Close da trama e da aplicação Sicoob" width="800" height="800" loading="lazy"><span>Outro olhar ↗</span></button></div>
+            <div class="featured-caption"><div><span class="featured-index">03 / Sicoob</span><h3>Materiais que se complementam.</h3></div><p>A trama natural, a aba preta e a aplicação frontal criam contraste e textura.</p></div>
+          </article>
         </div>
+      </section>
 
-        <div class="model-grid">
-          <article class="model-card">
-            <span class="model-icon trucker" aria-hidden="true"></span>
-            <h3>Boné Trucker</h3>
-            <p>Frente estruturada, tela respirável e presença forte para ações promocionais.</p>
+      <section class="section works-section" id="trabalhos" aria-labelledby="trabalhos-titulo">
+        <span id="modelos" class="anchor-alias" aria-hidden="true"></span>
+        <div class="portfolio-heading"><div><p class="eyebrow">Nosso portfólio</p><h2 id="trabalhos-titulo">Mais peças.<br>Outras possibilidades.</h2></div><p>Explore outros trabalhos, compare combinações e encontre uma referência para o seu projeto.</p></div>
+        <div class="portfolio-toolbar"><div class="work-filters" aria-label="Filtrar trabalhos"><button type="button" data-filter="all" aria-pressed="true">Todos</button><button type="button" data-filter="bones" aria-pressed="false">Bonés</button><button type="button" data-filter="viseiras" aria-pressed="false">Viseiras</button></div><span class="portfolio-hint">Toque nas peças para explorar <span aria-hidden="true">↗</span></span></div>
+        <p class="sr-only" data-work-status aria-live="polite">14 trabalhos</p>
+        <div class="works-grid">
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-sand" type="button" data-work="byd" aria-label="Ver fotos do trabalho BYD · Vitória Motors">
+              <img src="assets/images/ambientadas/peca-281-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para BYD · Vitória Motors" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="byd">BYD · Vitória Motors</button></h3><p>Bordado branco sobre tecido preto.</p></div>
           </article>
-          <article class="model-card">
-            <span class="model-icon americano" aria-hidden="true"></span>
-            <h3>Americano</h3>
-            <p>Formato clássico para empresas, equipes e uniformes com visual profissional.</p>
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-sage" type="button" data-work="lubrax" aria-label="Ver fotos do trabalho Lubrax">
+              <img src="assets/images/ambientadas/peca-285-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para Lubrax" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="lubrax">Lubrax</button></h3><p>Tecido verde, tela e aplicação frontal.</p></div>
           </article>
-          <article class="model-card">
-            <span class="model-icon dad" aria-hidden="true"></span>
-            <h3>Dad Hat</h3>
-            <p>Mais casual e confortável, com acabamento macio para marcas de lifestyle.</p>
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-sand" type="button" data-work="sicoob" aria-label="Ver fotos do trabalho Sicoob">
+              <img src="assets/images/ambientadas/peca-287-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para Sicoob" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="sicoob">Sicoob</button></h3><p>Trama natural, aba preta e aplicação frontal.</p></div>
           </article>
-          <article class="model-card">
-            <span class="model-icon reta" aria-hidden="true"></span>
-            <h3>Aba Reta</h3>
-            <p>Visual urbano, boa área frontal e construção marcante para coleções e lojas.</p>
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-lavender" type="button" data-work="ecotech" aria-label="Ver fotos do trabalho Eco Tech Areia">
+              <img src="assets/images/ambientadas/peca-279-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para Eco Tech Areia" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="ecotech">Eco Tech Areia</button></h3><p>Aplicação em cores sobre uma base preta.</p></div>
           </article>
-          <article class="model-card">
-            <span class="model-icon viseira" aria-hidden="true"></span>
-            <h3>Viseira</h3>
-            <p>Leve e funcional para eventos esportivos, turismo, verão e ativações externas.</p>
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-blue" type="button" data-work="r2" aria-label="Ver fotos do trabalho R2 Florestal">
+              <img src="assets/images/ambientadas/peca-283-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para R2 Florestal" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="r2">R2 Florestal</button></h3><p>Bordado azul e branco com tela preta.</p></div>
           </article>
-          <article class="model-card">
-            <span class="model-icon bucket" aria-hidden="true"></span>
-            <h3>Bucket</h3>
-            <p>Peça de moda com área ampla para bordados, etiquetas e combinações de tecido.</p>
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-sand" type="button" data-work="perobas" aria-label="Ver fotos do trabalho Perobas–RN">
+              <img src="assets/images/ambientadas/peca-290-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para Perobas–RN" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="perobas">Perobas–RN</button></h3><p>Composição em tons terrosos e detalhe frontal.</p></div>
           </article>
-          <article class="model-card">
-            <span class="model-icon chapeu" aria-hidden="true"></span>
-            <h3>Chapéu</h3>
-            <p>Opção com apelo regional e outdoor para agro, pesca, eventos e turismo.</p>
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-lavender" type="button" data-work="bullguer" aria-label="Ver fotos do trabalho Bullguer">
+              <img src="assets/images/ambientadas/peca-292-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para Bullguer" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="bullguer">Bullguer</button></h3><p>Composição gráfica em preto e branco.</p></div>
           </article>
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-peach" type="button" data-work="rockzone" aria-label="Ver fotos do trabalho Rockzone">
+              <img src="assets/images/ambientadas/peca-294-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para Rockzone" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="rockzone">Rockzone</button></h3><p>Cores, relevo e textura vistos de perto.</p></div>
+          </article>
+          <article class="work-card" data-category="viseiras">
+            <button class="work-image stage-peach" type="button" data-work="bubu" aria-label="Ver fotos do trabalho Bubu">
+              <img src="assets/images/ambientadas/peca-297-card.webp" width="800" height="533" alt="Viseira produzido pela PraSol para Bubu" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="bubu">Bubu</button></h3><p>Viseira estampada com cores suaves.</p></div>
+          </article>
+          <article class="work-card" data-category="viseiras">
+            <button class="work-image stage-blue" type="button" data-work="vicito" aria-label="Ver fotos do trabalho Vicito">
+              <img src="assets/images/ambientadas/peca-296-card.webp" width="800" height="533" alt="Viseira produzido pela PraSol para Vicito" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="vicito">Vicito</button></h3><p>Viseira com estampa floral em azul.</p></div>
+          </article>
+          <article class="work-card" data-category="viseiras">
+            <button class="work-image stage-sand" type="button" data-work="brasas" aria-label="Ver fotos do trabalho Brasas Burguer">
+              <img src="assets/images/ambientadas/peca-299-card.webp" width="800" height="533" alt="Viseira produzido pela PraSol para Brasas Burguer" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="brasas">Brasas Burguer</button></h3><p>Viseira azul com aplicações frontal e lateral.</p></div>
+          </article>
+          <article class="work-card" data-category="viseiras">
+            <button class="work-image stage-sage" type="button" data-work="gerson" aria-label="Ver fotos do trabalho Gerson Sports">
+              <img src="assets/images/ambientadas/peca-301-card.webp" width="800" height="533" alt="Viseira produzido pela PraSol para Gerson Sports" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="gerson">Gerson Sports</button></h3><p>Viseira branca com personalização preta.</p></div>
+          </article>
+          <article class="work-card" data-category="viseiras">
+            <button class="work-image stage-lavender" type="button" data-work="hidratz" aria-label="Ver fotos do trabalho Hidratz">
+              <img src="assets/images/ambientadas/peca-302-card.webp" width="800" height="533" alt="Viseira produzido pela PraSol para Hidratz" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="hidratz">Hidratz</button></h3><p>Viseira branca com composição em verde e preto.</p></div>
+          </article>
+          <article class="work-card" data-category="bones">
+            <button class="work-image stage-blue" type="button" data-work="loovi" aria-label="Ver fotos do trabalho Loovi">
+              <img src="assets/images/ambientadas/peca-loovi1-card.webp" width="800" height="533" alt="Boné produzido pela PraSol para Loovi" loading="lazy" decoding="async">
+              <span class="work-count">Explorar <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="work-info"><h3><button type="button" data-work="loovi">Loovi</button></h3><p>Boné azul com aplicação frontal em alto-relevo.</p></div>
+          </article>
+        </div>
+        <button class="more-works" type="button" data-more-works hidden>Ver mais trabalhos <span aria-hidden="true">↓</span></button>
+        <div class="portfolio-end"><p>Seu próximo projeto pode começar por uma referência.<br><strong>A gente ajuda a transformar em uma peça sua.</strong></p><a class="btn btn-primary" href="#orcamento">CRIAR MEU PROJETO <span aria-hidden="true">→</span></a></div>
+      </section>
+
+      <section class="section detail-story" id="acabamentos" aria-labelledby="detalhes-titulo">
+        <div class="detail-heading"><p class="eyebrow">O que faz a diferença</p><h2 id="detalhes-titulo">Chegue mais perto.</h2><p>Textura, aplicação e costura. A qualidade também mora aqui.</p></div>
+        <p class="detail-swipe-hint">Deslize para ver os detalhes <span aria-hidden="true">→</span></p>
+        <div class="detail-triptych">
+          <button type="button" class="detail-item" data-work="byd" data-start-photo="1"><span class="detail-photo detail-bordado"><img src="assets/images/ambientadas/peca-282.webp" alt="Detalhe do bordado branco BYD Vitória Motors" width="1536" height="1024" loading="lazy"></span><span class="detail-label"><strong>Bordado com presença</strong><span>Ver a peça ↗</span></span></button>
+          <button type="button" class="detail-item" data-work="loovi" data-start-photo="2"><span class="detail-photo"><img src="assets/images/detalhe-aplicacao-azul.jpg" alt="Aplicação em alto-relevo no boné Loovi azul" width="1540" height="1021" loading="lazy"></span><span class="detail-label"><strong>Relevo que valoriza</strong><span>Ver a peça ↗</span></span></button>
+          <button type="button" class="detail-item" data-work="sicoob" data-start-photo="2"><span class="detail-photo"><img src="assets/images/ambientadas/peca-289.webp" alt="Trama e acabamento da aplicação Sicoob" width="1024" height="1536" loading="lazy"></span><span class="detail-label"><strong>Texturas em harmonia</strong><span>Ver a peça ↗</span></span></button>
         </div>
       </section>
 
@@ -176,152 +326,10 @@
         </div>
 
         <ol class="process-list">
-          <li>
-            <span>01</span>
-            <h3>Envie sua ideia ou logo</h3>
-            <p>Recebemos sua referência, briefing, marca ou rascunho inicial pelo atendimento.</p>
-          </li>
-          <li>
-            <span>02</span>
-            <h3>Escolha o modelo</h3>
-            <p>Indicamos formato, tecido, cores e aplicação conforme uso, prazo e quantidade.</p>
-          </li>
-          <li>
-            <span>03</span>
-            <h3>Aprove o layout</h3>
-            <p>Você confere a composição antes da produção para evitar surpresa no resultado.</p>
-          </li>
-          <li>
-            <span>04</span>
-            <h3>Produção</h3>
-            <p>Corte, costura, aplicação e acabamento seguem uma rotina de conferência.</p>
-          </li>
-          <li>
-            <span>05</span>
-            <h3>Envio</h3>
-            <p>O pedido é revisado, embalado e enviado para sua cidade com acompanhamento.</p>
-          </li>
+          <li><span>01</span><div><h3>Conte sua ideia</h3><p>Envie sua marca, referência e quantidade. A gente orienta os materiais e a personalização.</p></div></li>
+          <li><span>02</span><div><h3>Aprove a composição</h3><p>Você confere e aprova uma prévia digital fiel (cores, medidas e aplicação) antes de ir para a produção.</p></div></li>
+          <li><span>03</span><div><h3>Da produção ao envio</h3><p>Corte, costura, aplicação e conferência rigorosa. Depois, o pedido é embalado e enviado com segurança.</p></div></li>
         </ol>
-      </section>
-
-      <section class="section finish-section" id="acabamentos">
-        <div class="finish-copy">
-          <p class="eyebrow">Acabamentos</p>
-          <h2>O acabamento decide se o boné parece brinde ou produto de marca</h2>
-          <p>
-            Bordado, silk, sublimação, patch, telas, reguladores e tecidos são definidos pensando
-            no desenho da arte, no volume do lote e na durabilidade da peça.
-          </p>
-        </div>
-
-        <div class="finish-grid">
-          <article>
-            <h3>Bordado</h3>
-            <p>Alto relevo, baixo relevo e preenchimentos com leitura limpa da marca.</p>
-          </article>
-          <article>
-            <h3>Silk</h3>
-            <p>Boa solução para áreas maiores, campanhas e composições mais gráficas.</p>
-          </article>
-          <article>
-            <h3>Sublimação</h3>
-            <p>Cores e estampas com liberdade visual para painéis e peças promocionais.</p>
-          </article>
-          <article>
-            <h3>Patch</h3>
-            <p>Aplicação com personalidade para coleções, marcas e linhas especiais.</p>
-          </article>
-          <article>
-            <h3>Telas</h3>
-            <p>Combinação de respiro, estrutura e cor para bonés trucker e promocionais.</p>
-          </article>
-          <article>
-            <h3>Reguladores e tecidos</h3>
-            <p>Fechamentos, sarjas, brim, tactel e combinações pensadas para uso real.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section audiences-section" id="publicos">
-        <div class="section-heading">
-          <p class="eyebrow">Para quem fabricamos</p>
-          <h2>Peças para quem precisa entregar presença, equipe e lembrança</h2>
-        </div>
-
-        <div class="audience-strip">
-          <span>Empresas</span>
-          <span>Eventos</span>
-          <span>Agro</span>
-          <span>Turismo</span>
-          <span>Campanhas</span>
-          <span>Equipes</span>
-          <span>Lojas</span>
-        </div>
-      </section>
-
-      <section class="section why-section" id="diferenciais">
-        <div class="why-panel">
-          <p class="eyebrow">Por que fazer com a Bonés PraSol</p>
-          <h2>Atendimento de perto, produção na mão e acabamento levado a sério</h2>
-        </div>
-
-        <div class="why-grid">
-          <article>
-            <h3>Produção própria</h3>
-            <p>Você fala com quem entende o que acontece dentro da produção.</p>
-          </article>
-          <article>
-            <h3>Preço competitivo</h3>
-            <p>Orçamento direto da fábrica, com escolhas claras para ajustar o lote.</p>
-          </article>
-          <article>
-            <h3>Cuidado com acabamento</h3>
-            <p>Conferência visual, proporção da arte e combinação correta de materiais.</p>
-          </article>
-          <article>
-            <h3>Atendimento próximo</h3>
-            <p>Orientação sem enrolar, com respostas práticas do pedido ao envio.</p>
-          </article>
-          <article>
-            <h3>Experiência em bonelaria</h3>
-            <p>Olhar de quem já viu o que funciona no tecido, na aba e na aplicação.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section gallery-section" id="galeria">
-        <div class="section-heading compact">
-          <p class="eyebrow">Galeria</p>
-          <h2>Bastidores e peças que mostram a fábrica por dentro</h2>
-          <p>
-            Um espaço para destacar corte, costura, bordado, estoque, equipe e peças finalizadas com
-            a mesma clareza que o atendimento promete.
-          </p>
-        </div>
-
-        <!-- Troque cada .photo-illustration por uma tag <img> quando tiver fotos reais da PraSol. -->
-        <div class="gallery-grid">
-          <figure class="photo-slot large">
-            <div class="photo-illustration workshop" aria-hidden="true"></div>
-            <figcaption>Processo dentro da fábrica</figcaption>
-          </figure>
-          <figure class="photo-slot">
-            <div class="photo-illustration caps" aria-hidden="true"></div>
-            <figcaption>Bonés finalizados</figcaption>
-          </figure>
-          <figure class="photo-slot">
-            <div class="photo-illustration embroidery" aria-hidden="true"></div>
-            <figcaption>Acabamento e aplicação</figcaption>
-          </figure>
-          <figure class="photo-slot">
-            <div class="photo-illustration family" aria-hidden="true"></div>
-            <figcaption>Atendimento direto</figcaption>
-          </figure>
-          <figure class="photo-slot wide">
-            <div class="photo-illustration packaging" aria-hidden="true"></div>
-            <figcaption>Pedidos embalados para envio</figcaption>
-          </figure>
-        </div>
       </section>
 
       <section class="section faq-section" id="faq">
@@ -366,7 +374,7 @@
 
             <ul class="quote-points" aria-label="Informações coletadas no orçamento">
               <li>Pedido mínimo a partir de 30 unidades</li>
-              <li>Logo enviada agora ou definida depois</li>
+              <li>Aprovação de layout digital antes de produzir</li>
               <li>Resumo pronto para continuar no WhatsApp</li>
             </ul>
 
@@ -381,98 +389,116 @@
           </div>
 
           <form class="quote-form" data-budget-form novalidate>
+            <div class="quote-reference" data-quote-reference hidden><span>Referência: <strong data-reference-name></strong></span><button type="button" data-clear-reference aria-label="Remover referência do orçamento">×</button></div>
             <div class="quote-progress" aria-live="polite">
-              <span data-step-label>Etapa 1 de 7</span>
+              <span data-step-label>Etapa 1 de 3</span>
               <div class="quote-progress-track" aria-hidden="true">
                 <span data-progress-bar></span>
               </div>
             </div>
 
+            <!-- ETAPA 1: SEUS DADOS -->
             <div class="quote-step is-active" data-budget-step>
-              <label for="quote-whatsapp">WhatsApp para contato</label>
-              <div class="phone-field">
-                <span>+55</span>
-                <input
-                  type="tel"
-                  id="quote-whatsapp"
-                  name="whatsapp"
-                  inputmode="tel"
-                  autocomplete="tel"
-                  placeholder="(84) 9 9897-2123"
-                  required
-                />
+              <h3 class="quote-step-title">Seus dados para contato</h3>
+
+              <div class="quote-field">
+                <label for="quote-whatsapp">WhatsApp (com DDD)</label>
+                <div class="phone-field">
+                  <span>+55</span>
+                  <input
+                    type="tel"
+                    id="quote-whatsapp"
+                    name="whatsapp"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    placeholder="(84) 9 9897-2123"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="quote-field-grid">
+                <div class="quote-field">
+                  <label for="quote-name">Seu nome</label>
+                  <input
+                    type="text"
+                    id="quote-name"
+                    name="nome"
+                    autocomplete="name"
+                    placeholder="Seu nome ou da sua empresa"
+                    required
+                  />
+                </div>
+
+                <div class="quote-field">
+                  <label for="quote-email">Seu e-mail</label>
+                  <input
+                    type="email"
+                    id="quote-email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="contato@empresa.com"
+                    required
+                  />
+                </div>
               </div>
             </div>
 
+            <!-- ETAPA 2: O PEDIDO -->
             <div class="quote-step" data-budget-step>
-              <label for="quote-name">Nome</label>
-              <input
-                type="text"
-                id="quote-name"
-                name="nome"
-                autocomplete="name"
-                placeholder="Seu nome"
-                required
-              />
+              <h3 class="quote-step-title">Detalhes do seu pedido</h3>
+
+              <div class="quote-field">
+                <label for="quote-quantity">Quantidade aproximada (mínimo 30 peças)</label>
+                <select id="quote-quantity" name="quantidade" required>
+                  <option value="">Escolher quantidade</option>
+                  <option>30 a 49 unidades</option>
+                  <option>50 a 99 unidades</option>
+                  <option>100 a 299 unidades</option>
+                  <option>300 a 999 unidades</option>
+                  <option>1000 unidades ou mais</option>
+                  <option>Menos de 30 unidades</option>
+                  <option>Ainda estou definindo</option>
+                </select>
+              </div>
+
+              <div class="quote-field-grid">
+                <div class="quote-field">
+                  <label for="quote-product">Tipo de produto</label>
+                  <select id="quote-product" name="tipo" required>
+                    <option value="">Escolher modelo</option>
+                    <option>Boné trucker</option>
+                    <option>Boné americano</option>
+                    <option>Boné aba curva</option>
+                    <option>Boné aba reta</option>
+                    <option>Viseira</option>
+                    <option>Bucket hat</option>
+                    <option>Ainda não sei o modelo</option>
+                  </select>
+                </div>
+
+                <div class="quote-field">
+                  <label for="quote-purpose">Finalidade dos bonés</label>
+                  <select id="quote-purpose" name="finalidade" required>
+                    <option value="">Escolher finalidade</option>
+                    <option>Uniforme para equipe</option>
+                    <option>Evento ou ação promocional</option>
+                    <option>Brinde para clientes</option>
+                    <option>Marca, loja ou coleção própria</option>
+                    <option>Grupo, turma ou associação</option>
+                    <option>Revenda</option>
+                    <option>Outro uso</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
+            <!-- ETAPA 3: PERSONALIZAÇÃO -->
             <div class="quote-step" data-budget-step>
-              <label for="quote-email">E-mail</label>
-              <input
-                type="email"
-                id="quote-email"
-                name="email"
-                autocomplete="email"
-                placeholder="contato@email.com"
-                required
-              />
-            </div>
+              <h3 class="quote-step-title">Arte e personalização</h3>
 
-            <div class="quote-step" data-budget-step>
-              <label for="quote-quantity">Quantidade aproximada de bonés</label>
-              <select id="quote-quantity" name="quantidade" required>
-                <option value="">Escolher</option>
-                <option>30 a 49 unidades</option>
-                <option>50 a 99 unidades</option>
-                <option>100 a 299 unidades</option>
-                <option>300 a 999 unidades</option>
-                <option>1000 unidades ou mais</option>
-                <option>Menos de 30 unidades</option>
-                <option>Ainda estou definindo</option>
-              </select>
-            </div>
-
-            <div class="quote-step" data-budget-step>
-              <label for="quote-product">Tipo de produto desejado</label>
-              <select id="quote-product" name="tipo" required>
-                <option value="">Escolher</option>
-                <option>Boné trucker</option>
-                <option>Boné americano</option>
-                <option>Boné aba curva</option>
-                <option>Boné aba reta</option>
-                <option>Viseira</option>
-                <option>Bucket hat</option>
-                <option>Ainda não sei o modelo</option>
-              </select>
-            </div>
-
-            <div class="quote-step" data-budget-step>
-              <label for="quote-purpose">Finalidade dos bonés</label>
-              <select id="quote-purpose" name="finalidade" required>
-                <option value="">Escolher</option>
-                <option>Uniforme para equipe</option>
-                <option>Evento ou ação promocional</option>
-                <option>Brinde para clientes</option>
-                <option>Marca, loja ou coleção própria</option>
-                <option>Grupo, turma ou associação</option>
-                <option>Revenda</option>
-                <option>Outro uso</option>
-              </select>
-            </div>
-
-            <div class="quote-step" data-budget-step>
               <fieldset class="logo-choice">
-                <legend>Logo ou arte da personalização</legend>
+                <legend>Você já tem a logo ou arte da marca?</legend>
                 <label>
                   <input type="radio" name="tem_logo" value="sim" required />
                   Tenho a logo para enviar
@@ -484,8 +510,9 @@
               </fieldset>
 
               <label class="upload-box is-disabled" for="quote-logo" data-upload-box>
-                <span data-upload-label>Escolher arquivo</span>
+                <span data-upload-label>Escolher arquivo da logo (opcional)</span>
                 <small>PNG, JPG ou PDF até 5 MB</small>
+                <small class="upload-hint">📌 Ao abrir o WhatsApp, anexe seu arquivo na conversa.</small>
                 <input
                   type="file"
                   id="quote-logo"
@@ -512,8 +539,9 @@
             </p>
 
             <div class="quote-success" data-form-success hidden>
-              <strong>Resumo preparado.</strong>
+              <strong>Resumo preparado com sucesso!</strong>
               <span>O WhatsApp será aberto com os dados do pedido para continuar o atendimento.</span>
+              <p class="quote-success-hint">💡 <strong>Dica:</strong> Se você possui a logo, lembre-se de <strong>enviar o arquivo na conversa</strong> do WhatsApp que vai se abrir.</p>
             </div>
           </form>
         </div>
@@ -564,6 +592,15 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <a class="mobile-quote" href="#orcamento" aria-label="Ir para o orçamento"><span>Vamos criar para sua marca?</span><strong>Orçamento ↗</strong></a>
+
+    <dialog class="work-dialog" aria-labelledby="work-dialog-title">
+      <div class="dialog-shell"><div class="dialog-top"><span>PRASOL / TRABALHOS REALIZADOS</span><button type="button" class="dialog-close" aria-label="Fechar fotos">Fechar <span aria-hidden="true">×</span></button></div>
+        <div class="dialog-content"><div class="dialog-gallery"><div class="dialog-stage stage-sand" data-photo-stage><img data-dialog-photo src="assets/images/ambientadas/peca-281.webp" alt="" width="1536" height="1024"><button type="button" class="photo-arrow photo-prev" aria-label="Foto anterior">←</button><button type="button" class="photo-arrow photo-next" aria-label="Próxima foto">→</button><span class="photo-counter" data-photo-counter></span></div><div class="photo-thumbnails" aria-label="Ângulos deste trabalho"></div></div>
+        <div class="dialog-copy"><p class="eyebrow" data-work-category></p><h2 id="work-dialog-title"></h2><h3 data-work-title></h3><p data-work-description></p><p class="dialog-note">Uma peça já produzida pela PraSol. Materiais, cores e personalização são definidos para cada projeto.</p><a class="btn btn-primary" href="#orcamento" data-dialog-quote>QUERO ALGO NESSA LINHA →</a></div></div>
+      </div>
+    </dialog>
+    <script src="portfolio-data.js"></script>
+    <script src="script.js?v=20261104-orcamento"></script>
   </body>
 </html>

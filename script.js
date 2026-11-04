@@ -1,3 +1,4 @@
+let budgetReference = "";
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
@@ -118,7 +119,7 @@ if (budgetForm) {
 
   function validateLogoFile(file) {
     if (!file) {
-      return "Envie a logo ou marque que ainda não tem logo.";
+      return "";
     }
 
     const extension = file.name.split(".").pop()?.toLowerCase();
@@ -146,34 +147,36 @@ if (budgetForm) {
         showError("Informe um WhatsApp com DDD.", fields.whatsapp);
         return false;
       }
+
+      if (fields.nome.value.trim().length < 3) {
+        showError("Informe seu nome com pelo menos 3 letras.", fields.nome);
+        return false;
+      }
+
+      if (!isValidEmail(fields.email.value.trim())) {
+        showError("Informe um e-mail válido.", fields.email);
+        return false;
+      }
     }
 
-    if (currentStep === 1 && fields.nome.value.trim().length < 3) {
-      showError("Informe seu nome com pelo menos 3 letras.", fields.nome);
-      return false;
+    if (currentStep === 1) {
+      if (!fields.quantidade.value) {
+        showError("Escolha uma quantidade aproximada.", fields.quantidade);
+        return false;
+      }
+
+      if (!fields.tipo.value) {
+        showError("Escolha o tipo de produto desejado.", fields.tipo);
+        return false;
+      }
+
+      if (!fields.finalidade.value) {
+        showError("Escolha a finalidade dos bonés.", fields.finalidade);
+        return false;
+      }
     }
 
-    if (currentStep === 2 && !isValidEmail(fields.email.value.trim())) {
-      showError("Informe um e-mail válido.", fields.email);
-      return false;
-    }
-
-    if (currentStep === 3 && !fields.quantidade.value) {
-      showError("Escolha uma quantidade aproximada.", fields.quantidade);
-      return false;
-    }
-
-    if (currentStep === 4 && !fields.tipo.value) {
-      showError("Escolha o tipo de produto desejado.", fields.tipo);
-      return false;
-    }
-
-    if (currentStep === 5 && !fields.finalidade.value) {
-      showError("Escolha a finalidade dos bonés.", fields.finalidade);
-      return false;
-    }
-
-    if (currentStep === 6) {
+    if (currentStep === 2) {
       const logoAnswer = getLogoAnswer();
 
       if (!logoAnswer) {
@@ -183,7 +186,7 @@ if (budgetForm) {
         return false;
       }
 
-      if (logoAnswer === "sim") {
+      if (logoAnswer === "sim" && logoInput.files[0]) {
         const fileError = validateLogoFile(logoInput.files[0]);
 
         if (fileError) {
@@ -236,10 +239,12 @@ if (budgetForm) {
   function getFormSummary() {
     const logoAnswer = getLogoAnswer();
     const fileName = logoInput.files[0]?.name;
-    const logoText =
-      logoAnswer === "sim"
-        ? `Tenho a logo para enviar${fileName ? ` (${fileName})` : ""}`
-        : "Ainda não tenho logo";
+    let logoText = "Ainda não tenho logo";
+    if (logoAnswer === "sim") {
+      logoText = fileName
+        ? `Tenho a logo (${fileName} - anexando aqui na conversa)`
+        : "Tenho a logo para enviar (vou anexar aqui na conversa)";
+    }
 
     return [
       "Olá! Vim pelo site da Bonés PraSol e gostaria de solicitar um orçamento de bonés personalizados.",
@@ -253,6 +258,7 @@ if (budgetForm) {
       `Finalidade dos bonés: ${fields.finalidade.value}`,
       `Logo/arte: ${logoText}`,
       "",
+      budgetReference ? `Referência de trabalho: ${budgetReference}` : "",
       "Gostaria de receber um orçamento.",
     ].join("\n");
   }
@@ -351,3 +357,118 @@ const hero = document.querySelector(".hero");
 if (hero) {
   observer.observe(hero);
 }
+
+// Realized work: filters and a single accessible photo viewer.
+const workDialog = document.querySelector('.work-dialog');
+const workPhoto = document.querySelector('[data-dialog-photo]');
+const photoStage = document.querySelector('[data-photo-stage]');
+const thumbnails = document.querySelector('.photo-thumbnails');
+let activeWork = null;
+let activePhoto = 0;
+let workTrigger = null;
+function displayWorkPhoto(index) {
+  if (!activeWork) return;
+  activePhoto = (index + activeWork.photos.length) % activeWork.photos.length;
+  workPhoto.src = `assets/images/ambientadas/peca-${activeWork.photos[activePhoto]}.webp`;
+  workPhoto.alt = `${activeWork.name}, foto ${activePhoto + 1} de ${activeWork.photos.length}, peça produzida pela PraSol`;
+  document.querySelector('[data-photo-counter]').textContent = `${activePhoto + 1} / ${activeWork.photos.length}`;
+  thumbnails.querySelectorAll('button').forEach((button, i) => button.setAttribute('aria-pressed', String(i === activePhoto)));
+}
+function openWork(id, trigger, startPhoto = 0) {
+  activeWork = PRASOL_WORKS.find(work => work.id === id);
+  if (!activeWork || !workDialog) return;
+  workTrigger = trigger;
+  document.querySelector('#work-dialog-title').textContent = activeWork.name;
+  document.querySelector('[data-work-title]').textContent = activeWork.title;
+  document.querySelector('[data-work-description]').textContent = activeWork.description;
+  document.querySelector('[data-work-category]').textContent = activeWork.category === 'bones' ? 'Boné personalizado' : 'Viseira personalizada';
+  photoStage.className = `dialog-stage stage-${activeWork.tone}`;
+  thumbnails.replaceChildren();
+  activeWork.photos.forEach((photo, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('aria-label', `Ver foto ${index + 1} de ${activeWork.name}`);
+    const img = document.createElement('img');
+    img.src = `assets/images/ambientadas/peca-${photo}-card.webp`;
+    img.alt = '';
+    button.append(img);
+    button.addEventListener('click', () => displayWorkPhoto(index));
+    thumbnails.append(button);
+  });
+  document.querySelectorAll('.photo-arrow').forEach(button => button.hidden = activeWork.photos.length < 2);
+  displayWorkPhoto(startPhoto);
+  workDialog.showModal();
+  document.body.classList.add('work-opened');
+}
+document.querySelectorAll('[data-work]').forEach(button => button.addEventListener('click', () => openWork(button.dataset.work, button, Number(button.dataset.startPhoto || 0))));
+document.querySelector('.dialog-close')?.addEventListener('click', () => workDialog.close());
+workDialog?.addEventListener('close', () => { document.body.classList.remove('work-opened'); workTrigger?.focus(); });
+workDialog?.addEventListener('click', event => { if (event.target === workDialog) { const box = workDialog.getBoundingClientRect(); if(event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) workDialog.close(); } });
+workDialog?.addEventListener('keydown', event => { if(event.key === 'ArrowRight') { event.preventDefault(); displayWorkPhoto(activePhoto + 1); } if(event.key === 'ArrowLeft') { event.preventDefault(); displayWorkPhoto(activePhoto - 1); } });
+document.querySelector('.photo-next')?.addEventListener('click', () => displayWorkPhoto(activePhoto + 1));
+document.querySelector('.photo-prev')?.addEventListener('click', () => displayWorkPhoto(activePhoto - 1));
+let touchStartX = 0;
+photoStage?.addEventListener('touchstart', event => { touchStartX = event.changedTouches[0].clientX; }, {passive:true});
+photoStage?.addEventListener('touchend', event => { const delta = event.changedTouches[0].clientX - touchStartX; if(Math.abs(delta)>55) displayWorkPhoto(activePhoto + (delta<0 ? 1 : -1)); }, {passive:true});
+document.querySelector('[data-dialog-quote]')?.addEventListener('click', () => {
+  budgetReference = activeWork?.name || '';
+  document.querySelector('[data-reference-name]').textContent = budgetReference;
+  document.querySelector('[data-quote-reference]').hidden = !budgetReference;
+  workDialog.close();
+});
+document.querySelector('[data-clear-reference]')?.addEventListener('click', () => {
+  budgetReference = '';
+  document.querySelector('[data-quote-reference]').hidden = true;
+});
+let workFilter = 'all';
+let showAllWorks = false;
+function updateWorkList() {
+  const cards = [...document.querySelectorAll('.work-card')];
+  const matching = cards.filter(card => workFilter === 'all' || card.dataset.category === workFilter);
+  cards.forEach(card => card.hidden = true);
+  matching.forEach((card, index) => card.hidden = !showAllWorks && index >= 6);
+  const remaining = Math.max(0, matching.length - 6);
+  const more = document.querySelector('[data-more-works]');
+  more.hidden = showAllWorks || remaining === 0;
+  more.textContent = `Ver mais trabalhos (${remaining}) ↓`;
+  document.querySelector('[data-work-status]').textContent = `${showAllWorks ? matching.length : Math.min(6, matching.length)} de ${matching.length} trabalhos exibidos`;
+}
+document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+  workFilter = button.dataset.filter;
+  showAllWorks = false;
+  document.querySelectorAll('[data-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  updateWorkList();
+}));
+document.querySelector('[data-more-works]')?.addEventListener('click', () => {
+  showAllWorks = true;
+  updateWorkList();
+  const next = [...document.querySelectorAll('.work-card:not([hidden])')][6]?.querySelector('button');
+  next?.focus({preventScroll:true});
+});
+updateWorkList();
+document.querySelectorAll('[data-hero-work]').forEach(button => button.addEventListener('click', () => {
+  const work = PRASOL_WORKS.find(item => item.id === button.dataset.heroWork);
+  const heroProduct = document.querySelector('#hero-product');
+  heroProduct.src = `assets/images/ambientadas/peca-${work.photos[0]}.webp`;
+  heroProduct.alt = `Peça personalizada para ${work.name}, produzida pela PraSol`;
+  document.querySelector('#hero-client').textContent = work.name;
+  document.querySelector('.hero-scene').dataset.heroTone = work.tone;
+  const inspect = document.querySelector('.hero-inspect');
+  inspect.dataset.work = work.id;
+  inspect.setAttribute('aria-label', `Ver de perto o trabalho ${work.name}`);
+  document.querySelectorAll('[data-hero-work]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+}));
+
+// Show a quiet mobile quote shortcut after the opening; hide it at the form.
+let openingAbove = false;
+let quoteVisible = false;
+const quoteShortcut = document.querySelector('.mobile-quote');
+function updateQuoteShortcut() { quoteShortcut?.classList.toggle('is-visible', openingAbove && !quoteVisible); }
+const quoteShortcutObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.target.id === 'inicio') openingAbove = !entry.isIntersecting && entry.boundingClientRect.bottom < 0;
+    if(entry.target.id === 'orcamento') quoteVisible = entry.isIntersecting;
+  });
+  updateQuoteShortcut();
+}, {threshold:0});
+['inicio','orcamento'].forEach(id => {const section=document.getElementById(id);if(section)quoteShortcutObserver.observe(section);});

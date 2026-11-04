@@ -1,3 +1,9 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# Original photography and reference material stay local. Only web-ready derivatives are published.
+assets/Fotos site/
+assets/Logos clientes/
+output/
+entrega-outra-ia/
