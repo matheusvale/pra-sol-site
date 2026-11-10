@@ -893,7 +893,8 @@ button {
   min-width: 0;
 }
 
-.footer-column h2 {
+.footer-column h2,
+.footer-column .footer-heading {
   margin: 0;
   color: var(--yellow);
   font-size: 0.78rem;

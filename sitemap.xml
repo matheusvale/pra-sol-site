@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://bonesprasol.com.br/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bonesprasol.com.br/assets/images/ambientadas/peca-281.webp</image:loc>
+      <image:title>Boné preto BYD Vitória Motors com bordado branco</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bonesprasol.com.br/assets/images/ambientadas/peca-285.webp</image:loc>
+      <image:title>Boné Lubrax verde com tela e aplicação frontal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bonesprasol.com.br/assets/images/ambientadas/peca-287.webp</image:loc>
+      <image:title>Boné Sicoob trama natural com aba preta</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bonesprasol.com.br/assets/images/ambientadas/peca-loovi1.webp</image:loc>
+      <image:title>Boné azul Loovi com aplicação frontal em alto-relevo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bonesprasol.com.br/assets/images/ambientadas/peca-297.webp</image:loc>
+      <image:title>Viseira personalizada Bubu</image:title>
+    </image:image>
+  </url>
+</urlset>

@@ -1,0 +1,6 @@
+# Robots.txt - Bonés PraSol
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bonesprasol.com.br/sitemap.xml
