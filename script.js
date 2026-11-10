@@ -54,7 +54,7 @@ if (budgetForm) {
   const uploadBox = budgetForm.querySelector("[data-upload-box]");
   const uploadLabel = budgetForm.querySelector("[data-upload-label]");
   const logoInput = budgetForm.querySelector("[data-logo-input]");
-  const whatsappNumber = "5584998972123";
+  const whatsappNumber = "5584981725425";
   const maxLogoSize = 5 * 1024 * 1024;
   const allowedLogoTypes = ["image/png", "image/jpeg", "application/pdf"];
   let currentStep = 0;
